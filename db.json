@@ -1,0 +1,25 @@
+{
+    "pizza": [
+        {"id": 1, "name": "Margherita Pizza", "price": 500, "description": "lorem ipsum dolor", "imageUrl":"margherita.jpg"},
+        {"id": 2, "name": "Shrimp Pizza", "price": 630, "description": "lorem ipsum dolor", "imageUrl":"margherita.jpg"},
+        {"id": 3, "name": "Farmhouse Pizza", "price": 630, "description": "lorem ipsum dolor", "imageUrl":"margherita.jpg"},
+        {"id": 4, "name": "Chicken Pizza", "price": 630, "description": "lorem ipsum dolor", "imageUrl":"margherita.jpg"},
+        {"id": 5, "name": "Pepproni Pizza", "price": 630, "description": "lorem ipsum dolor", "imageUrl":"margherita.jpg"},
+        {"id": 6, "name": "Veggie Deluxe Pizza", "price": 630, "description": "lorem ipsum dolor", "imageUrl":"margherita.jpg"},
+        {"id": 7, "name": "Cottage Cheese Pizza", "price": 630, "description": "lorem ipsum dolor", "imageUrl":"margherita.jpg"},
+        {"id": 8, "name": "Triple Meat Pizza", "price": 630, "description": "lorem ipsum dolor", "imageUrl":"margherita.jpg"},
+        {"id": 9, "name": "Hawaaian Pizza", "price": 630, "description": "lorem ipsum dolor", "imageUrl":"margherita.jpg"}
+    ],
+    "addresses": [
+        { "id": 1, "address": "Belmont Avenue", "state": "KS" },
+    { "id": 2, "address": "10th Street", "state": "MO" },
+        { "id": 3, "address": "Route 100", "state": "IA" }, 
+        { "id": 4, "address": "Evergreen Lane", "state": "MN" },
+        { "id": 5, "address": "Main Street", "state": "WI" },
+        { "id": 6, "address": "Briarwood Drive", "state": "MN" },
+        { "id": 7, "address": "Linden Avenue", "state": "IA" },
+        { "id": 8, "address": "Eagle Road", "state": "MO" },
+        { "id": 9, "address": "Glenwood Avenue", "state": "KS" },
+        { "id": 10, "address": "Elm Street", "state": "WI" }
+    ]
+  }
