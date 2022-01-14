@@ -8,8 +8,6 @@ import ErrorPage from '../components/ErrorPage'
 
 export default function Home({ pizzas }) {
 
-  console.log("Index pizzas:", pizzas);
-
   if (pizzas === null) {
     return <ErrorPage />
   }
