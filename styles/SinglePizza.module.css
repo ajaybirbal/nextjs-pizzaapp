@@ -1,0 +1,15 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0px;
+    min-height: 75vh;
+}
+
+.imageContainer{
+    width: 45%;
+}
+
+.infoContainer{
+    width: 50%;
+}

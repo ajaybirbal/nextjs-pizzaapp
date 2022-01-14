@@ -3,8 +3,16 @@ import styles from '../styles/Home.module.css'
 import axios from 'axios'
 import Card from '../components/Card'
 import Head from 'next/head'
+import { getPizzas } from '../services/pizza'
+import ErrorPage from '../components/ErrorPage'
 
-export default function Home({pizzas}) {
+export default function Home({ pizzas }) {
+
+  console.log("Index pizzas:", pizzas);
+
+  if (pizzas === null) {
+    return <ErrorPage />
+  }
 
   return (
     <>
@@ -12,9 +20,9 @@ export default function Home({pizzas}) {
         <title>Tasty Pizza - Order online</title>
       </Head>
       <Layout>
-        <h1>Our Pizzas: </h1>
+        <h1>Our Pizza Range: </h1>
         <div className={styles.cardContainer}>
-          {pizzas.map(pizza => <Card pizza={pizza} key={pizza.id}/>)}
+          {pizzas.map(pizza => <Card pizza={pizza} key={pizza.id} />)}
         </div>
       </Layout>
     </>
@@ -23,13 +31,19 @@ export default function Home({pizzas}) {
 
 export const getStaticProps = async () => {
 
-  const baseUrl = "http://localhost:3004/";
+  const data = await getPizzas().then(pizza => pizza);
 
-  const data = await axios.get(`${baseUrl}pizza`)
+  if (data) {
+    return {
+      props: {
+        pizzas: data
+      }
+    }
+  }
 
   return {
-    props:{
-      pizzas: data.data
+    props: {
+      pizzas: null
     }
   }
 }

@@ -3,7 +3,7 @@ import styles from './../styles/Footer.module.css'
 const Footer = () => {
     return (
         <div className={styles.footer}>
-            Pizza Images downladed from : 
+            © Ajay Birbal - ajaybirbal@gmail.com - All IP belongs and are protected to their respective owners. Website is for educational and informational purpose only.
         </div>
     );
 }

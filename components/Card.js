@@ -1,21 +1,29 @@
 import styles from "./../styles/Card.module.css"
 import Image from 'next/image'
+import Link from "next/link";
+import AddToCartButton from "./AddToCartButton";
 
-const Card = ({pizza}) => {
+const Card = ({ pizza }) => {
     return (
         <div className={styles.cardContainer}>
-            <p>{pizza.name}</p>
-            <Image
-                src="/margherita.jpg"
-                layout="responsive"
-                width="100%" 
-                height="100%"
-                alt={pizza.name}
-            />
+
+            <Link href={`/pizza/${encodeURIComponent(pizza.id)}`} passHref>
+                <a><h3>{pizza.name}</h3>
+                    <Image
+                        src={`/${pizza.imageUrl}`}
+                        layout="responsive"
+                        width="100%"
+                        height="100%"
+                        alt={pizza.name}
+                    />
+                </a>
+            </Link>
+
             <div className={styles.priceWrapper}>
                 <span>Rs. {pizza.price}</span>
-                <button className="addToCartButton">Add</button>
+                <AddToCartButton id={pizza.id} />
             </div>
+
         </div>
     );
 }

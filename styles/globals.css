@@ -1,5 +1,5 @@
 :root{
-  --primary-brand-color: brown;
+  --primary-brand-color: #009867;
   --max-width-site: 1024px;
 }
 
@@ -7,8 +7,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  min-height: 100%;
+}
+
+h1,h2,h3{
+  font-family: 'Noto Serif', serif;
 }
 
 a {
@@ -21,13 +25,31 @@ a {
 }
 
 .addToCartButton{
-  padding: 10px 30px;
+  padding: 10px 40px;
   background-color: green;
   color: white;
   font-weight: bold;
   border: 0;
+  border-radius: 5px;
+  letter-spacing: 1px;
 }
 
 .addToCartButton:hover{
   
+}
+
+.addToCartButton-big{
+  padding: 15px 70px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  border-radius: 5px;
+  font-size: 17px;
+  letter-spacing: 2px;
+}
+
+error-mesage-gbl{
+  text-align: "center"; 
+  padding: "50px"
 }
