@@ -33,20 +33,74 @@
     border: none;
     color: white;
     letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.12s ease-in;
 }
 
 .addButton {
     background-color: green;
 }
 
+.addButton:hover {
+    background-color: rgb(31, 192, 31);
+}
+
 .reduceButton {
     background-color: black;
+}
+
+.reduceButton:hover {
+    background-color: rgba(66, 65, 65, 0.973);
 }
 
 .deleteButton{
     background-color: red;
 }
 
+.deleteButton:hover {
+    background-color: rgb(150, 22, 22);
+}
+
+
 .deleteAllButton{
     float: right;
+}
+
+.checkoutButton{
+    background-color: #ffba24;
+    display: inline-block;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    color: white;
+    font-size: larger;
+    letter-spacing: 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: all 0.12s ease-in;
+}
+
+.checkoutButton:hover{
+    background-color: #ffe23e;
+}
+
+.totalBill{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.gobackLink{
+    text-align: right;
+}
+
+.choiceButton{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.choiceButton button{
+    margin-top: 30px;
 }

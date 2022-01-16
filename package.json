@@ -9,6 +9,11 @@
     "json-server": "json-server --watch db.json --port 3004"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@material-ui/icons": "^4.11.2",
+    "@mui/icons-material": "^5.2.5",
+    "@mui/material": "^5.2.8",
     "axios": "^0.24.0",
     "next": "12.0.8",
     "next-redux-wrapper": "^7.0.5",

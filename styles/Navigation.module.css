@@ -2,4 +2,69 @@
     height: 70px;
     width: 100vw;
     background-color: var(--primary-brand-color);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: stretch;
+
+    padding: 0 30px;
+}
+
+.listContainer{
+    background-color: blue;
+    height: 100%;
+    margin-top: 0;
+}
+
+.navigation ul {
+    display: flex;
+    list-style-type: none;
+    height: 100%;
+    margin-top: 0;
+    margin-left: -14px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.basicMenuTextStyle{
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.navigation ul li{
+    border-right: 1px solid #F6F6F6;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-brand-color);
+    transition: all 0.18s ease-in;
+}
+
+.navigation ul li:first-child{
+    border-left: 1px solid white;
+}
+
+
+.navigation ul li:hover{
+    background-color: white;
+    color: var(--primary-brand-color);
+}
+
+.cartButtonContainer{
+    display: flex;
+    align-items: center;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    cursor: pointer;
+    background-color: var(--primary-brand-color);
+    transition: all 0.18s ease-in;
+}
+
+.cartButtonContainer:hover{
+    background-color: white;
+    color: var(--primary-brand-color);
 }

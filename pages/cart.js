@@ -1,20 +1,23 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import React, { useEffect } from 'react'
-import Layout from './../components/Layout'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import styles from './../styles/Cart.module.css'
-import usePizzaGetter from '../services/usePizzaGetter';
+
+import Layout from './../components/Layout'
 import ErrorPage from '../components/ErrorPage';
-import { combinePizzainfoQuantity } from './../utils/helper'
+
+import styles from './../styles/Cart.module.css'
+
+import usePizzaGetter from '../services/usePizzaGetter';
+
+import { combinePizzainfoQuantity, totalBill } from './../utils/helper'
 import { addPizza, deleteAllPizzas, deletePizza, reducePizza } from './../reducers/cartReducer'
 
 function Cart() {
-
     const dispatch = useDispatch();
     const state = useSelector(state => state.cart);
 
-    //Get the updated complete pizzas info and their prices from the server
+    //Get the latests updated pizzas info and prices from the server
     const { data, error } = usePizzaGetter(state);
 
     if (!data && !error) {
@@ -31,7 +34,7 @@ function Cart() {
     if (error)
         return <ErrorPage />
 
-    //combine stae based quantities and full information array
+    //combine state based quantities and full pizza information and creates new  array
     const newPizzaCompleteArray = combinePizzainfoQuantity(data, state);
 
     //Increases the quantity of pizza
@@ -52,11 +55,33 @@ function Cart() {
         dispatch(deleteAllPizzas());
     }
 
+    //Deletes a particular item from the cart
     const deleteItem = (e, id) => {
         e.preventDefault();
         dispatch(deletePizza(id));
     }
 
+    //Displays option whether to empty cart or proceed with payout
+    const displayChoiceButtons = () => {
+        return (
+            <div className={styles.choiceButton}>
+                <Link href='/payout'>
+                    <a>
+                        <div className={styles.checkoutButton}>Checkout</div>
+                    </a>
+                </Link>
+                <button
+                    className={`${styles.basicButtonStyle} ${styles.reduceButton} .deleteAllButton`}
+                    onClick={(e) => { clearCart(e) }}
+                >Delete All</button>
+            </div>
+        )
+    }
+
+    //Responsible for calculating total bill
+    const calculateTotal = () => <p className={styles.totalBill}>Total: Rs. {totalBill(newPizzaCompleteArray)}</p>
+
+    //Display individual items of the cart
     const displayItems = () => {
         //This is being output
         return newPizzaCompleteArray.map(pizza => {
@@ -92,6 +117,7 @@ function Cart() {
                             > Delete </button>
                         </div>
                     </div>
+                    <hr />
                 </>
             )
         })
@@ -101,15 +127,13 @@ function Cart() {
         <>
             <Layout>
                 <div className="wrapper-gbl">
-                    <h1>Cart Page</h1>
+                    <h1>Cart Page:</h1>
+                    <hr />
                     {state.length === 0 ? (<h2 className={styles.emptyError}>The cart is empty!</h2>) : displayItems()}
-                    {state.length === 0 ? "" : <button
-                                                    className={`${styles.basicButtonStyle} ${styles.deleteButton} .deleteAllButton`}
-                                                    onClick={(e) => { clearCart(e) }}
-                                                    >Delete All</button>
-                    }
+                    {state.length === 0 ? "" : calculateTotal()}
+                    {state.length === 0 ? "" : displayChoiceButtons()}
                     <Link href='\'>
-                        <a><u><h5 className="">Go Back</h5></u></a>
+                        <a><u><h5 className={styles.gobackLink}>Go Back</h5></u></a>
                     </Link>
                 </div>
             </Layout>
