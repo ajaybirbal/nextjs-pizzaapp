@@ -49,7 +49,11 @@ a {
   letter-spacing: 2px;
 }
 
-error-mesage-gbl{
+.error-mesage-gbl{
   text-align: "center"; 
   padding: "50px"
+}
+
+.wrapper-gbl{
+  min-height: 75vh;
 }

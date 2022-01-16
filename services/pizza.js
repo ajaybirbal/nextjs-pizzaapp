@@ -1,6 +1,11 @@
+//API for getting the pizzas information from the server for the SSR SSG
 import axios from "axios"
+import { API_URL } from "./backendinfo";
 
-const baseUrl = "http://localhost:3004/";
+const baseUrl = API_URL;
+
+//From swr library
+const fetcher = url => axios.get(url).then(res => res.data)
 
 export const getPizzas = async () => {
     try {

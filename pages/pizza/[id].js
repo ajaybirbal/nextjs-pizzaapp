@@ -6,8 +6,19 @@ import AddToCartButton from './../../components/AddToCartButton'
 import Link from "next/link";
 import Head from "next/head";
 import ErrorPage from "../../components/ErrorPage";
+import { useRouter } from "next/router";
 
 const Pizza = ({ pizza }) => {
+
+    const router = useRouter();
+
+    if (router.isFallback) {
+        return(
+            <Layout>
+                <h1>Please wait...</h1>
+            </Layout>
+        )
+    }
 
     if (pizza === null) {
         return <ErrorPage />
@@ -19,7 +30,7 @@ const Pizza = ({ pizza }) => {
                 <title>Order {pizza.name} online!</title>
             </Head>
             <Layout>
-                <div className={styles.wrapper}>
+                <div className={`wrapper-gbl ${styles.wrapper}`}>
                     <div className={styles.imageContainer}>
                         <Image
                             src={`/${pizza.imageUrl}`}
@@ -54,7 +65,7 @@ export const getStaticPaths = async () => {
 
     return {
         paths,
-        fallback: false
+        fallback: true
     }
 }
 
@@ -65,7 +76,8 @@ export const getStaticProps = async ({ params }) => {
         return {
             props: {
                 pizza: null
-            }
+            },
+            revalidate: 10,
         }
     }
 

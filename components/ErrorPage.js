@@ -9,7 +9,7 @@ function ErrorPage() {
                 <title>Tasty Pizza - Order online</title>
             </Head>
             <Layout>
-                <h3>Error connecting to website. Please try again later.</h3>
+                <h3>Something is wrong. Please try again later.</h3>
             </Layout>
         </>
     )

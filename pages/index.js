@@ -1,6 +1,5 @@
 import Layout from '../components/Layout'
 import styles from '../styles/Home.module.css'
-import axios from 'axios'
 import Card from '../components/Card'
 import Head from 'next/head'
 import { getPizzas } from '../services/pizza'
@@ -42,6 +41,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       pizzas: null
-    }
+    },
+    revalidate: 45,
   }
 }

@@ -1,0 +1,52 @@
+.emptyError{
+    text-align: center;
+}
+
+.nameImageContainer{
+    display: flex;
+    align-items: center;
+}
+
+.imageContainer{
+    height: 50px;
+    width: 50px;
+    margin-right: 30px;
+}
+
+.cartRow{
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    font-size: 20px;
+    align-items: center;
+}
+
+.buttonContainer{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.basicButtonStyle{
+    padding: 8px 20px;
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.addButton {
+    background-color: green;
+}
+
+.reduceButton {
+    background-color: black;
+}
+
+.deleteButton{
+    background-color: red;
+}
+
+.deleteAllButton{
+    float: right;
+}
