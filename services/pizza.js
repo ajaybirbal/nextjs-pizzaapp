@@ -4,8 +4,6 @@ import { API_URL } from "./backendinfo";
 
 const baseUrl = API_URL;
 
-//From swr library
-const fetcher = url => axios.get(url).then(res => res.data)
 
 export const getPizzas = async () => {
     try {
