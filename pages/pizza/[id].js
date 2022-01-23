@@ -20,6 +20,7 @@ const Pizza = ({ pizza }) => {
         )
     }
 
+    //If pizza failed to load
     if (pizza === null) {
         return <ErrorPage />
     }
@@ -77,14 +78,14 @@ export const getStaticProps = async ({ params }) => {
             props: {
                 pizza: null
             },
-            revalidate: 10,
         }
     }
 
     return {
         props: {
             pizza: data
-        }
+        },
+        revalidate: 10,
     }
 }
 

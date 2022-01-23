@@ -27,7 +27,6 @@ export default function Home({ pizzas }) {
 }
 
 export const getStaticProps = async () => {
-
   const data = await getPizzas().then(pizza => pizza);
 
   if (data) {

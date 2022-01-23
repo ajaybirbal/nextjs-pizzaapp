@@ -62,10 +62,11 @@ function Cart() {
     }
 
     //Displays option whether to empty cart or proceed with payout
+    //Checkout button will take you back to homepage
     const displayChoiceButtons = () => {
         return (
             <div className={styles.choiceButton}>
-                <Link href='/payout'>
+                <Link href='/'>
                     <a>
                         <div className={styles.checkoutButton}>Checkout</div>
                     </a>
