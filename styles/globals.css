@@ -20,10 +20,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .addToCartButton{
   padding: 10px 40px;
   background-color: green;
@@ -33,10 +29,11 @@ a {
   border-radius: 5px;
   letter-spacing: 1px;
   cursor: pointer;
+  transition: all 0.13s ease-in;
 }
 
 .addToCartButton:hover{
-  
+  background-color: rgb(17, 201, 17)
 }
 
 .addToCartButton-big{

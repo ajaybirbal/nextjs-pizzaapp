@@ -14,3 +14,15 @@
     padding: 20px 0;
     align-items: center;
 }
+
+@media only screen and (max-width: 1000px) {
+    .cardContainer{
+        width: 41%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .cardContainer{
+        width: 100%;
+    }
+}
