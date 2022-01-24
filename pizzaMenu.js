@@ -1,16 +1,15 @@
 const pizzas = {
     "pizza": [
-        {"id": 1, "name": "Margherita Pizza", "price": 500, "description": "lorem ipsum dolor", "imageUrl":"test.jpg"},
-        {"id": 2, "name": "Shrimp Pizza", "price": 700, "description": "lorem ipsum dolor", "imageUrl":"test.jpg"},
-        {"id": 3, "name": "Farmhouse Pizza", "price": 800, "description": "lorem ipsum dolor", "imageUrl":"test.jpg"},
-        {"id": 4, "name": "Chicken Pizza", "price": 630, "description": "lorem ipsum dolor", "imageUrl":"test.jpg"},
-        {"id": 5, "name": "Pepproni Pizza", "price": 630, "description": "lorem ipsum dolor", "imageUrl":"test.jpg"},
-        {"id": 6, "name": "Veggie Deluxe Pizza", "price": 630, "description": "lorem ipsum dolor", "imageUrl":"test.jpg"},
-        {"id": 7, "name": "Cottage Cheese Pizza", "price": 630, "description": "lorem ipsum dolor", "imageUrl":"test.jpg"},
-        {"id": 8, "name": "Triple Meat Pizza", "price": 630, "description": "lorem ipsum dolor", "imageUrl":"test.jpg"},
-        {"id": 9, "name": "Hawaaian Pizza", "price": 630, "description": "lorem ipsum dolor", "imageUrl":"test.jpg"},
-        {"id": 54, "name": "Veggie Pizza", "price": 700, "description": "lorem ipsum dolor", "imageUrl":"test.jpg"},
-        {"id": 70, "name": "Test Pizza", "price": 700, "description": "lorem ipsum dolor", "imageUrl":"test.jpg"}
+        {"id": 1, "name": "Margherita Pizza", "price": 420, "description": "Pizza Margherita (more commonly known in English as Margherita pizza) is a typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt, and extra-virgin olive oil.", "imageUrl":"margherita.jpg"},
+        {"id": 2, "name": "Seafood Pizza", "price": 734, "description": "Seafood pizza is pizza prepared with seafood as a primary ingredient. Many types of seafood ingredients in fresh, frozen or canned forms may be used on seafood pizza.", "imageUrl":"seafood.jpg"},
+        {"id": 3, "name": "Greek Pizza", "price": 345, "description": "Greek pizza was created by Greek immigrants who came to America and were introduced to Italian pizza. Greek-style pizza, especially popular in the New England states, features a thick and chewy crust cooked in shallow, oiled pans, resulting in a nearly deep-fried bottom. While this style has a crust that is puffier and chewier than thin crust pizzas, it’s not quite as thick as a deep-dish or Sicilian crust.", "imageUrl":"margherita.jpg"},
+        {"id": 4, "name": "Chicken Pizza", "price": 440, "description": "An Italian favorite, this chicken pizza recipe is a delicious mix of flat bread or base topped with cheese, chillies, onion, garlic sauce and chunks of chicken.Tossed to perfection, this quick and easy pizza recipe is the solution to all those chicken and cheese cravings. Perfect for those movie nights or parties at home.", "imageUrl":"chicken.jpg"},
+        {"id": 5, "name": "Pepproni Pizza", "price": 510, "description": "Pepperoni is an American variety of spicy salami made from cured pork and beef seasoned with paprika or other chili pepper. Prior to cooking, pepperoni is characteristically soft, slightly smoky, and bright red in color. Thinly sliced pepperoni is one of the most popular pizza toppings in American pizzerias. ", "imageUrl":"pepproni.jpg"},
+        {"id": 6, "name": "Veggie Deluxe Pizza", "price": 485, "description": "lorem ipsum dolor", "imageUrl":"margherita.jpg"},
+        {"id": 7, "name": "Mediterranean Pizza", "price": 390, "description": "Mediterranean pizza recipe is the ultimate fresh family dinner that everyone will devour. This is a delicious homemade pizza with tasty Mediterranean toppings that will knock your socks off!", "imageUrl":"medi.png"},
+        {"id": 8, "name": "Triple Meat Pizza", "price": 710, "description": "lorem ipsum dolor", "imageUrl":"margherita.jpg"},
+        {"id": 9, "name": "Hawaaian Pizza", "price": 300, "description": "Hawaiian pizza or pineapple pizza is a pizza that has pineapple and ham. But, bacon can also be used. It was created in 1962 in Ontario, Canada. This pizza can start arguments, because people debate if pineapple belongs on pizza.", "imageUrl":"hawaiian.jpg"},
+        {"id": 54, "name": "Veggie Pizza", "price": 460, "description": "lorem ipsum dolor", "imageUrl":"vegetable.jpg"}
     ]
 }
 

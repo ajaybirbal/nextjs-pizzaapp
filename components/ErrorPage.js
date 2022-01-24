@@ -9,7 +9,9 @@ function ErrorPage() {
                 <title>Tasty Pizza - Order online</title>
             </Head>
             <Layout>
-                <h3>Something is wrong. Please try again later.</h3>
+                <div className="wrapper-gbl">
+                    <h3>Something is wrong. Please try again later.</h3>
+                </div>
             </Layout>
         </>
     )

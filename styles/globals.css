@@ -8,7 +8,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 h1,h2,h3{
@@ -55,4 +55,16 @@ a {
 
 .wrapper-gbl{
   min-height: 75vh;
+}
+
+@media screen and (max-width: 1000px){
+  .wrapper-gbl{
+    min-height: 82vh;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .wrapper-gbl{
+    min-height: 86vh;
+  }
 }

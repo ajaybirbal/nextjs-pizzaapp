@@ -1,13 +1,12 @@
 .navigation {
     height: 70px;
-    width: 100vw;
+    max-width: 100vw;
     background-color: var(--primary-brand-color);
     display: flex;
     justify-content: space-between;
     color: white;
     align-items: stretch;
-
-    padding: 0 30px;
+    padding: 0 25px;
 }
 
 .listContainer{
@@ -21,7 +20,7 @@
     list-style-type: none;
     height: 100%;
     margin-top: 0;
-    margin-left: -14px;
+    margin-left: -34px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -67,4 +66,20 @@
 .cartButtonContainer:hover{
     background-color: white;
     color: var(--primary-brand-color);
+}
+
+@media only screen and (max-width: 1000px) {
+    .navigation{
+        padding: 0 8px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .navigation{
+        padding: 0;
+    }
+
+    .navigation ul{
+        margin-left: -40px;
+    }
 }

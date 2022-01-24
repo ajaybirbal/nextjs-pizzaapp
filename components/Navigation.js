@@ -28,7 +28,7 @@ const Navigation = () => {
                         </Link>
                     </li>
                     <li className={`${styles.basicMenuTextStyle}`}>
-                        <Link href='/'>
+                        <Link href='/about'>
                             <a>About us</a>
                         </Link>
                     </li>
