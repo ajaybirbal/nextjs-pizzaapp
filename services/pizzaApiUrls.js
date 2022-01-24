@@ -1,7 +1,7 @@
 //Single resource to manage all the API urls
 
 //Base Url
-export const API_URL = "http://localhost:3000/api/";
+const API_URL = process.env.URL_API;
 
 //Url for getting all pizzas
 export const ALL_PIZZAS_API_URL = `${API_URL}pizzas`

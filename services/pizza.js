@@ -1,4 +1,5 @@
 //API for getting the pizzas information from the server for the SSR SSG
+//These functions are available server side only
 
 import axios from "axios"
 import {ALL_PIZZAS_API_URL, getSinglePizzaURL} from "./pizzaApiUrls";

@@ -8,10 +8,9 @@ import {ALL_PIZZAS_API_URL} from "./pizzaApiUrls";
 //As required swr library
 const fetcher = url => axios.get(url).then(res => res.data)
 
-
 function usePizzaGetter(state) {
 
-    const { data, error } = useSWR(ALL_PIZZAS_API_URL, fetcher);
+    const { data, error } = useSWR(`${process.env.NEXT_PUBLIC_API_URL}pizzas`, fetcher);
 
     if (!data)
         return { data, error }
