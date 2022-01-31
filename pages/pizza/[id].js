@@ -63,7 +63,7 @@ export const getStaticPaths = async () => {
     let pizzas = await getPizzas().then(pizza => pizza);
 
     //Build time loading of all pizzas becausse API won't be available by then
-    if (pizzas === undefined) {
+    if (pizzas === undefined || pizzas === null) {
         pizzas = pizzasData['pizza']
     }
 
@@ -84,7 +84,7 @@ export const getStaticProps = async ({ params }) => {
     let data = await getSinglePizza(params.id).then(pizza => pizza);
 
     //---Build time loading of all pizzas becausse API won't be available until full build
-    if(data === undefined){
+    if(data === undefined || data === null){
         let tempPizzas = pizzasData['pizza']
         data = tempPizzas.filter(pizza => pizza.id === Number(params.id))[0]   
     }

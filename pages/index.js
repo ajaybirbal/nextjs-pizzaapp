@@ -33,7 +33,7 @@ export const getStaticProps = async () => {
   let data = await getPizzas().then(pizza => pizza);
 
   //For the build time handling of data because api is not loaded during the build time
-  if (data === undefined) {
+  if (data === undefined || data === null) {
     data = pizzasData['pizza'];
   }
 
