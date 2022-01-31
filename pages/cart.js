@@ -89,18 +89,22 @@ function Cart() {
             return (
                 <>
                     <div className={styles.cartRow}>
-                        <div className={styles.nameImageContainer}>
-                            <div className={styles.imageContainer}>
-                                <Image src={`/${pizza.imageUrl}`}
-                                    layout="responsive"
-                                    width="100%"
-                                    height="100%"
-                                    alt={pizza.name} />
+                        <div className={styles.leftContainer}>
+                            <div className={styles.nameImageContainer}>
+                                <div className={styles.imageContainer}>
+                                    <Image src={`/${pizza.imageUrl}`}
+                                        layout="responsive"
+                                        width="100%"
+                                        height="100%"
+                                        alt={pizza.name} />
+                                </div>
+                                <span>{pizza.name}</span>
                             </div>
-                            <span>{pizza.name}</span>
+                            <span>Rs. {pizza.price}</span>
+                            <span>Quantity:{pizza.quantity}</span>
                         </div>
-                        <span>Rs. {pizza.price}</span>
-                        <span>Quantity:{pizza.quantity}</span>
+
+
                         <div className={styles.buttonContainer}>
                             <button
                                 className={`${styles.basicButtonStyle} ${styles.addButton}`}
@@ -117,6 +121,7 @@ function Cart() {
                                 onClick={(e) => deleteItem(e, pizza.id)}
                             > Delete </button>
                         </div>
+
                     </div>
                     <hr />
                 </>
