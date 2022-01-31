@@ -8,8 +8,6 @@ export const getPizzas = async() => {
     try {
         const data = await axios.get(ALL_PIZZAS_API_URL);
 
-        console.log("INSIDE GET PIZZAS 4: ", data);
-
         if (data.data['pizza']) {
             return data.data['pizza'];
         }

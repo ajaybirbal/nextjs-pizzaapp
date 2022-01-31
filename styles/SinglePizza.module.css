@@ -1,21 +1,25 @@
-.wrapper{
+.wrapper {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 40px 0px;
 }
 
-.imageContainer{
+.imageContainer {
     width: 95%;
 }
 
-.infoContainer{
+.infoContainer {
     width: 100%;
+    margin-left: 35px;
 }
 
-@media only screen and (max-width: 450px){
-    .wrapper{
+@media only screen and (max-width: 450px) {
+    .wrapper {
         flex-direction: column;
         margin: 20px 20px;
+    }
+    .infoContainer {
+        margin-left: 0;
     }
 }

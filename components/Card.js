@@ -15,6 +15,8 @@ const Card = ({ pizza }) => {
                         width="100%"
                         height="100%"
                         alt={pizza.name}
+                        placeholder='blur'
+                        blurDataURL={`/${pizza.imageUrl}`}
                     />
                 </a>
             </Link>
