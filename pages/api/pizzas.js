@@ -1,5 +1,5 @@
-import pizzas from '../../pizzaMenu'
+import pizzasData from '../../pizzaMenu'
 
 export default function handler(req, res) {
-    res.status(200).json(pizzas)
+    res.status(200).json(pizzasData)
 }

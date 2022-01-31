@@ -8,6 +8,9 @@ import Head from "next/head";
 import ErrorPage from "../../components/ErrorPage";
 import { useRouter } from "next/router";
 
+//Loading of the data during the build time
+import pizzasData from "../../pizzaMenu";
+
 const Pizza = ({ pizza }) => {
 
     const router = useRouter();
@@ -57,7 +60,13 @@ const Pizza = ({ pizza }) => {
 }
 
 export const getStaticPaths = async () => {
-    const pizzas = await getPizzas().then(pizza => pizza);
+    let pizzas = await getPizzas().then(pizza => pizza);
+
+    //Build time loading of all pizzas becausse API won't be available by then
+    if (pizzas === undefined) {
+        pizzas = pizzasData['pizza']
+    }
+
     const paths = pizzas.map(pizza => {
         return {
             params: { id: pizza.id.toString() },
@@ -71,7 +80,14 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-    const data = await getSinglePizza(params.id).then(pizza => pizza);
+    
+    let data = await getSinglePizza(params.id).then(pizza => pizza);
+
+    //---Build time loading of all pizzas becausse API won't be available until full build
+    if(data === undefined){
+        let tempPizzas = pizzasData['pizza']
+        data = tempPizzas.filter(pizza => pizza.id === Number(params.id))[0]   
+    }
 
     if (!data) {
         return {

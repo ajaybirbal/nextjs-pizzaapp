@@ -5,6 +5,9 @@ import Head from 'next/head'
 import { getPizzas } from '../services/pizza'
 import ErrorPage from '../components/ErrorPage'
 
+//pizzas for buildtime data
+import  pizzasData  from './../pizzaMenu'
+
 export default function Home({ pizzas }) {
 
   if (pizzas === null) {
@@ -27,20 +30,25 @@ export default function Home({ pizzas }) {
 }
 
 export const getStaticProps = async () => {
-  const data = await getPizzas().then(pizza => pizza);
+  let data = await getPizzas().then(pizza => pizza);
+
+  //For the build time handling of data because api is not loaded during the build time
+  if (data === undefined) {
+    data = pizzasData['pizza'];
+  }
 
   if (data) {
     return {
       props: {
         pizzas: data
-      }
+      },
+      revalidate: 45,
     }
   }
 
   return {
     props: {
       pizzas: null
-    },
-    revalidate: 45,
+    }
   }
 }
